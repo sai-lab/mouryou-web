@@ -26,7 +26,7 @@ func (c controller) Render(w http.ResponseWriter, view string) {
 
 	err = tpl.Execute(w, nil)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
 }
