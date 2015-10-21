@@ -5,7 +5,7 @@ import (
 	"os"
 
 	assetfs "github.com/elazarl/go-bindata-assetfs"
-	"github.com/sai-lab/mouryou-web/lib/mouryou-web/controllers"
+	"github.com/sai-lab/mouryou-web/lib/controllers"
 	"github.com/sai-lab/mouryou-web/lib/realtime"
 	"github.com/sai-lab/mouryou/lib/models"
 	"github.com/zenazn/goji"
