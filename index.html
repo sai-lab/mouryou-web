@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>mouryou-web</title>
+    <script>
+      var ws = new WebSocket("ws://localhost:8000/ws");
+      ws.onmessage = function(e) {
+        console.log(e.data);
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

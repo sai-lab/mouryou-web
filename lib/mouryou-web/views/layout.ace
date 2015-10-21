@@ -1,0 +1,32 @@
+= doctype html
+html lang="en"
+  head
+    title mouryou
+
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    meta http-equiv="x-ua-compatible" content="ie=edge"
+
+    link href="/assets/images/favicon.ico" rel="shortcut icon"
+    link href="/assets/stylesheets/bootstrap.min.css" rel="stylesheet"
+    link href="/assets/stylesheets/font-awesome.min.css" rel="stylesheet"
+    link href="/assets/stylesheets/animate.min.css" rel="stylesheet"
+    link href="/assets/stylesheets/style.css" rel="stylesheet"
+
+  body
+    nav.navbar.navbar-fixed-top.bg-white
+      .container
+        a#app-title.navbar-brand.text-mouryou href="/"
+          i.fa.fa-cube.m-r-sm
+          span.bold mouryou
+
+    .container.m-y-md
+      = yield main
+
+    footer.small.m-y-md.text-muted
+      .container
+        i.fa.fa-copyright.m-r-sm
+        a.link-muted href="https://github.com/sai-lab/mouryou-web" target="_blank" Saisho Laboratory
+
+    script src="/assets/javascripts/mithril.min.js" type="text/javascript"
+    script src="/assets/javascripts/bootstrap.min.js" type="text/javascript"
