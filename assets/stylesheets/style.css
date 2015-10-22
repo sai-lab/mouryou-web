@@ -23,7 +23,7 @@
 
 @media (min-width: 62em) {
   .container {
-    max-width: 45rem;
+    max-width: 60rem;
   }
 }
 
@@ -70,4 +70,14 @@ a.link-mouryou,
 a.link-mouryou:hover {
   color: #00adb5;
   text-decoration: underline;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.chart {
+  padding: 2rem;
+  border: 1px solid #eceeef;
+  border-radius: .3rem;
 }
