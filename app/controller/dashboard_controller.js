@@ -4,7 +4,7 @@ var dashboard = dashboard || {};
   'use strict';
 
   dashboard.controller = function() {
-    this.options = m.prop({
+    this.options = {
       chart: {
         backgroundColor: 'transparent',
         renderTo: 'chart-block',
@@ -57,16 +57,16 @@ var dashboard = dashboard || {};
         min: 0.0,
         title: ''
       }
-    });
+    };
   };
 
-  dashboard.chart = m.prop({});
-  
+  dashboard.chart = {};
+
   dashboard.plotter = function(ctrl) {
     return function(element, isInitialized) {
       if (!isInitialized) {
         m.startComputation();
-        dashboard.chart(new Highcharts.Chart(ctrl.options()));
+        dashboard.chart = new Highcharts.Chart(ctrl.options);
         m.endComputation();
       }
     };
