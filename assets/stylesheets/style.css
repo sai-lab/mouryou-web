@@ -81,3 +81,7 @@ a.link-mouryou:hover {
   border: 1px solid #eceeef;
   border-radius: .3rem;
 }
+
+.chart text {
+  font-family: 'Exo 2';
+}

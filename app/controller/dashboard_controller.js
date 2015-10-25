@@ -4,12 +4,19 @@ var dashboard = dashboard || {};
   'use strict';
 
   dashboard.controller = function() {
+    this.hypervisors = m.request({
+      method: 'GET',
+      url: '/api/cluster/hypervisors',
+      initialValue: []
+    });
+
     this.options = {
       chart: {
         backgroundColor: 'transparent',
         renderTo: 'chart-block',
         type: 'line'
       },
+      colors: ['#003744', '#00596e', '#00728c', '#0090a3', '#00adb5'],
       credits: {
         enabled: false
       },
@@ -32,6 +39,7 @@ var dashboard = dashboard || {};
           }
         }
       },
+      series: [],
       subtitle: {},
       title: {
         text: null
@@ -66,7 +74,20 @@ var dashboard = dashboard || {};
     return function(element, isInitialized) {
       if (!isInitialized) {
         m.startComputation();
+
+        var arr = Array.apply(null, Array(100)).map(function() {
+          return 0.0;
+        });
+        ctrl.hypervisors().map(function(hypervisor) {
+          hypervisor.virtual_machines.map(function(machine) {
+            ctrl.options.series.push({
+              name: machine.name,
+              data: arr
+            });
+          });
+        });
         dashboard.chart = new Highcharts.Chart(ctrl.options);
+
         m.endComputation();
       }
     };
