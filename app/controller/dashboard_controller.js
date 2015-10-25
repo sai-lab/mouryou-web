@@ -4,6 +4,8 @@ var dashboard = dashboard || {};
   'use strict';
 
   dashboard.controller = function() {
+    this.wsURL = 'ws://' + window.location.host + '/ws'
+
     this.hypervisors = m.request({
       method: 'GET',
       url: '/api/cluster/hypervisors',
@@ -87,6 +89,31 @@ var dashboard = dashboard || {};
           });
         });
         dashboard.chart = new Highcharts.Chart(ctrl.options);
+
+        var ws = new WebSocket(ctrl.wsURL);
+        ws.onopen = function(e) {
+          console.log('Open: ' + ws.url);
+        };
+        ws.onclose = function(e) {
+          console.log('Close: ' + ws.url);
+        };
+        ws.onerror = function(e) {
+          console.log('Error: ' + e);
+        };
+        ws.onmessage = function(e) {
+          console.log('Message: ' + e.data);
+          var loads = e.data.split(',');
+          var diff = dashboard.chart.series.length - loads.length;
+          if (diff > 0) {
+            loads = loads.concat(Array.apply(null, Array(diff)).map(function() {
+              return '0.0';
+            }));
+          }
+          loads.map(function(load, i) {
+            dashboard.chart.series[i].addPoint(Number(load), true, true);
+          });
+          // dashboard.chart.redraw();
+        };
 
         m.endComputation();
       }

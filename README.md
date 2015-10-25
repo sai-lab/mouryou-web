@@ -17,6 +17,17 @@
     $ make build
     $ bin/mouryou-web
 
+### Highcharts
+
+`/assets/javascripts/highcharts.js` is downloaded from [download builder](http://www.highcharts.com/download).  
+The enabled options are shown in below.
+
+  - Compile code
+  - Adapters : Standalone framework
+  - Core : Core
+  - Dynamics and interaction : Dynamics
+  - Chart and serie types : Line
+
 #### License
 
 mouryou-web is released under the [MIT license](https://raw.githubusercontent.com/hico-horiuchi/mouryou-web/master/LICENSE).
