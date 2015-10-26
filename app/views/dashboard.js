@@ -5,6 +5,7 @@ var dashboard = dashboard || {};
 
   dashboard.view = function(ctrl) {
     document.title = 'mouryou';
+    var i = 0;
 
     return m('.row', [
       m('.col-md-9', [
@@ -22,16 +23,20 @@ var dashboard = dashboard || {};
                 m('i.fa.fa-fw.fa-server.m-r-sm'),
                 m('span.bold', hypervisor.name)
               ]),
-              hypervisor.virtual_machines.map(function(machine, i) {
-                return m('li.list-group-item.p-a-sm.animated.fadeInRight', {
+              hypervisor.virtual_machines.map(function(machine) {
+                var view =  m('li.list-group-item.p-a-sm.animated.fadeInRight', {
                   style: animationDelay(i)
                 }, [
                   m('i.fa.fa-fw.fa-hdd-o.m-r-sm'),
                   m('span.bold', machine.name),
-                  m('span.label.label-pill.bg-default.text-white.pull-right', [
+                  m('span.label.label-pill.bg-default.text-white.pull-right.animated', {
+                    id: 'machine-' + String(i)
+                  }, [
                     m('i.fa.fa-fw.fa-power-off')
                   ])
                 ]);
+                i += 1;
+                return view;
               })
             ];
           })
