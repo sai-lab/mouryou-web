@@ -1,5 +1,7 @@
 ## mouryou-web
 
+![screen.gif](https://raw.githubusercontent.com/sai-lab/mouryou-web/master/screen.gif)
+
 #### Requirements
 
   - [Golang](https://golang.org/) : 1.5
