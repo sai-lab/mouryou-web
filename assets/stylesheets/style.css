@@ -1,9 +1,12 @@
-.text-white,    a.text-white:hover    { color: #fff;    }
+.text-white,   a.text-white:hover   { color: #fff;    }
 .text-mouryou, a.text-mouryou:hover { color: #00adb5; }
 
-.bg-white    { background: #fff;    }
+.bg-default { background: #818a91; }
+.bg-white   { background: #fff;    }
 .bg-mouryou { background: #00adb5; }
 .bg-mouryou * { color: #fff !important; }
+
+.border-mouryou { border: 1px solid #00adb5; }
 
 .m-a-sm { margin:        .5rem !important; }
 .m-t-sm { margin-top:    .5rem !important; }
@@ -44,6 +47,7 @@
 body {
   font-family: 'Exo 2';
   font-weight: 400;
+  color: #393e46;
   padding-top: 50px;
 }
 
@@ -72,16 +76,26 @@ a.link-mouryou:hover {
   text-decoration: underline;
 }
 
-.no-border {
-  border: none !important;
-}
-
 .chart {
-  padding: 1rem;
   border: 1px solid #eceeef;
   border-radius: .3rem;
 }
 
 .chart text {
   font-family: 'Exo 2';
+  font-weight: 400 !important;
+}
+
+.list-group-item {
+  border: 1px solid #eceeef;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+}
+
+.list-group-item:last-child {
+  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
 }
