@@ -31,11 +31,11 @@ import (
 	"compress/gzip"
 	"fmt"
 	"io"
-	"strings"
-	"os"
-	"time"
 	"io/ioutil"
+	"os"
 	"path/filepath"
+	"strings"
+	"time"
 )
 
 func bindataRead(data []byte, name string) ([]byte, error) {
@@ -64,9 +64,9 @@ type asset struct {
 }
 
 type bindataFileInfo struct {
-	name string
-	size int64
-	mode os.FileMode
+	name    string
+	size    int64
+	mode    os.FileMode
 	modTime time.Time
 }
 
@@ -105,7 +105,7 @@ func appAppJs() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "app/app.js", size: 654, mode: os.FileMode(436), modTime: time.Unix(1445830916, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -125,11 +125,11 @@ func appControllerDashboard_controllerJs() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "app/controller/dashboard_controller.js", size: 2828, mode: os.FileMode(436), modTime: time.Unix(1445780810, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
-var _appViewDashboardJs = []byte("\x1f\x8b\x08\x00\x00\x09\x6e\x88\x00\xff\x84\x94\xcd\xae\xdb\x20\x10\x85\xf7\x79\x0a\xa4\x2e\x6c\x4b\x81\x4d\x57\xbd\x51\x77\xdd\x74\xdb\xed\x55\x54\x61\x83\x63\xd4\xc1\x58\xc3\x10\x37\xca\xcd\xbb\x97\xd8\x6e\x8c\xed\x34\x95\x22\x44\x0e\x67\x7e\xf8\x32\xe4\x2c\x91\x29\xe9\x9b\xd2\x49\x54\xec\x6b\xb2\xff\xf8\x60\xd7\xdb\x61\xb7\xcb\xeb\xd0\x56\x64\x5c\x9b\x17\xec\xba\x63\x2c\x0b\x5e\x33\x4f\x68\x2a\xca\xe2\x31\x9b\x43\xc4\xd9\xe8\x3e\xe6\x78\x04\x54\x84\x30\x06\x45\x97\xab\x82\xd5\x2d\x09\x32\x04\x3a\xba\x32\xeb\x02\x5e\x5c\x18\x93\x30\x86\x9a\x02\xb6\xcc\xe6\x99\x40\xd7\x67\x7b\xf6\x3e\xc8\x6c\x50\x2a\x07\xdc\x2a\xfe\x25\x91\xa7\x83\x46\x22\x2d\xd4\x41\xff\x34\xe8\xbc\x04\x57\xfd\x12\x96\x4b\xee\x6d\x34\x5d\x13\x13\x63\x95\x6b\x6b\x73\x7a\x4b\xfa\xef\xc0\x11\x69\x1c\xfb\x4e\xbc\xb7\xf9\xcb\xf1\xef\xf6\x58\xec\xb7\xfd\x7d\x5e\xf7\x17\x40\x80\xf1\xc4\x4f\xe8\x42\x27\xbc\x95\x00\xab\x66\xef\xb5\x44\x73\xe9\x34\x9e\x8d\x77\xe8\xf3\x42\x58\xd9\xcd\xd0\xe7\xa3\x62\xd5\xff\x04\xec\x7d\x21\x0e\x55\xc1\x24\x55\xb9\x21\x6d\x45\x79\xe2\x13\x6f\x41\xfa\x37\xf1\xbe\x89\xb2\x28\x1d\x2a\x8d\x8f\x93\x6e\x00\x25\x64\x6b\xac\x24\xad\x44\x2d\x95\xfe\xde\xfe\x30\xa7\x66\x8d\xf8\x51\xca\x44\x53\xfc\xf0\xba\xbf\xaf\x3e\xb6\xaa\x31\x02\xc7\x3b\xf0\x07\xa1\x45\x84\xef\x64\x1b\x0b\x83\x8a\x29\xe7\xcb\x89\xc6\x79\x2a\x56\xfe\xe3\x26\x43\x12\x70\x36\x48\x41\xc2\x4f\x2b\xab\xc6\xb4\xda\x2f\xb1\x4d\xea\x9e\x99\x35\xb6\x04\xdd\x73\x54\xaf\x29\x6c\x93\xb1\xf8\x1a\x2e\xa0\xdf\xd8\x18\x11\xab\x7f\xd3\x20\x2f\xb9\x59\x5f\x27\x0e\xd2\x33\x8a\x4f\x38\x36\x4a\x71\xf7\x02\xe3\x06\xe4\x74\xdd\x91\xe2\x2b\x3f\xc8\x52\xc3\xb8\xf2\xce\x00\xdc\x07\x43\xe9\x5a\x06\xa0\x74\x30\xba\x00\xc0\xf1\x9f\x3f\xfc\xd3\xa6\x3b\xd7\xc7\x59\x72\x75\x9d\x6d\x2f\x9e\x3c\x9c\x54\x3a\xac\xb4\xdb\xd2\x74\x3c\xfc\xf7\x11\xee\xe6\x44\xf1\xcf\xea\x56\xe4\x71\xfb\x27\x00\x00\xff\xff\xff\xb8\x7c\x33\xd4\x04\x00\x00")
+var _appViewDashboardJs = []byte("\x1f\x8b\x08\x00\x00\x09\x6e\x88\x00\xff\x84\x94\xcd\xae\xda\x30\x10\x85\xf7\x3c\x85\xa5\x2e\x92\x48\xd8\x9b\xae\x7a\x51\x77\xdd\x74\xdb\xed\x15\xaa\x4c\x3c\x21\x56\xc7\x76\x34\xb6\xa1\x88\xcb\xbb\xd7\x24\x29\x71\x12\x4a\x25\x64\x99\xe3\x33\x3f\xfe\x18\x73\x92\xc4\x94\xf4\xed\xc1\x49\x52\xec\x6b\xb6\xff\xf8\x60\xd7\xdb\x6e\xb3\x29\x9b\x68\xeb\xa0\x9d\x2d\x2b\x76\xdd\x30\x56\x44\x0f\xcc\x07\xd2\x75\x28\xd2\x31\x9b\x42\xc4\x49\xc3\x39\xe5\x78\x04\xd4\x81\x70\x08\x4a\x2e\x57\x47\x03\x36\x88\xa0\x03\x42\x72\x15\xc6\x45\xba\xb8\x38\x24\x61\x8c\x20\x44\xb2\xcc\x94\x85\x20\x77\x2e\xb6\xec\xbd\x97\x59\xaf\xd4\x0e\xb9\x51\xfc\x4b\x26\x8f\x07\xad\xa4\x30\x53\x7b\xfd\x53\xaf\xf3\x03\xba\xfa\x97\x30\x5c\x72\x6f\x92\xe9\x9a\x99\x18\xab\x9d\x6d\xf4\xf1\x2d\xeb\xbf\x43\x17\x02\xd0\xd0\x77\xe6\xbd\x4d\x5f\xf6\x7f\xb7\xfb\x6a\xbb\xee\xef\xf3\xb2\xbf\x88\x02\xb5\x0f\xfc\x48\x2e\x76\xc2\x1b\x89\xb8\x68\xf6\x5e\x4b\xb4\x97\x0e\xe8\xa4\xbd\x23\x5f\x56\xc2\xc8\x6e\x82\x3e\x1d\x55\x8b\xfe\x47\x60\xef\x33\xb1\xaf\x8a\x3a\xab\xca\x75\x00\x23\x0e\x47\x3e\xf2\x16\x01\x7e\x07\x7e\x6e\x93\x2c\x0e\x8e\x14\xd0\xe3\xa4\xeb\x41\x09\x69\xb5\x91\x01\x94\x68\xa4\x82\xef\xf6\x87\x3e\xb6\x4b\xc4\x8f\x52\x3a\x99\xd2\x87\x37\xe7\xfb\xea\x53\xab\x40\x09\x38\xdd\x81\x3f\x08\xcd\x22\x7c\x27\x6d\x2a\x8c\x2a\xa5\x9c\x2e\x27\xac\x34\x50\x2d\xfc\xfb\x55\x86\x2c\xe0\xa4\x29\x44\x89\x3f\x8d\xac\x5b\x6d\xc1\xcf\xb1\x8d\xea\x96\xe9\x25\xb6\x0c\xdd\x73\x54\xaf\x29\xac\x93\xb1\xf4\x1a\x2e\x08\x6f\x6c\x88\x48\xd5\xbf\x01\xca\x4b\xa9\x97\xd7\x49\x83\xf4\x8c\xe2\x13\x8e\xad\x52\xdc\xbd\xc0\xb8\x02\x39\x5e\x77\xa0\xf8\xca\x8f\xf2\x00\x38\xac\xbc\xd3\x88\xf7\xc1\x50\xd0\xc8\x88\x21\x1f\x8c\x2e\x22\x72\xfa\xe7\x0f\xff\xb4\xe9\xce\x9d\xd3\x2c\xb9\xa6\x29\xd6\x17\xcf\x1e\x4e\x2e\xed\x16\xda\x6d\x6e\xda\xef\xfe\xfb\x08\x37\x53\xa2\xf4\x67\x75\xab\xca\xb4\xfd\x13\x00\x00\xff\xff\xc8\x8b\xc7\x93\xd4\x04\x00\x00")
 
 func appViewDashboardJsBytes() ([]byte, error) {
 	return bindataRead(
@@ -144,8 +144,8 @@ func appViewDashboardJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "app/view/dashboard.js", size: 1236, mode: os.FileMode(436), modTime: time.Unix(1445830965, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	info := bindataFileInfo{name: "app/view/dashboard.js", size: 1236, mode: os.FileMode(436), modTime: time.Unix(1445834381, 0)}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -165,7 +165,7 @@ func assetsFontsExo2BoldTtf() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/fonts/exo2-bold.ttf", size: 34220, mode: os.FileMode(436), modTime: time.Unix(1409151031, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -185,7 +185,7 @@ func assetsFontsExo2RegularTtf() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/fonts/exo2-regular.ttf", size: 33280, mode: os.FileMode(436), modTime: time.Unix(1409153309, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -205,7 +205,7 @@ func assetsFontsFontawesomeWebfontEot() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/fonts/fontawesome-webfont.eot", size: 68875, mode: os.FileMode(436), modTime: time.Unix(1445402780, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -225,7 +225,7 @@ func assetsFontsFontawesomeWebfontSvg() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/fonts/fontawesome-webfont.svg", size: 355981, mode: os.FileMode(436), modTime: time.Unix(1445402780, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -245,7 +245,7 @@ func assetsFontsFontawesomeWebfontTtf() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/fonts/fontawesome-webfont.ttf", size: 138204, mode: os.FileMode(436), modTime: time.Unix(1445402780, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -265,7 +265,7 @@ func assetsFontsFontawesomeWebfontWoff() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/fonts/fontawesome-webfont.woff", size: 81284, mode: os.FileMode(436), modTime: time.Unix(1445402780, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -285,7 +285,7 @@ func assetsFontsFontawesomeWebfontWoff2() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/fonts/fontawesome-webfont.woff2", size: 64464, mode: os.FileMode(436), modTime: time.Unix(1445402780, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -305,7 +305,7 @@ func assetsImagesFaviconIco() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/images/favicon.ico", size: 4286, mode: os.FileMode(436), modTime: time.Unix(1445441739, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -325,7 +325,7 @@ func assetsJavascriptsHighchartsJs() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/javascripts/highcharts.js", size: 105792, mode: os.FileMode(436), modTime: time.Unix(1445771882, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -345,7 +345,7 @@ func assetsJavascriptsMithrilMinJs() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/javascripts/mithril.min.js", size: 18585, mode: os.FileMode(436), modTime: time.Unix(1445448584, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -365,7 +365,7 @@ func assetsJavascriptsMithrilMinJsMap() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/javascripts/mithril.min.js.map", size: 25939, mode: os.FileMode(436), modTime: time.Unix(1433312148, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -385,7 +385,7 @@ func assetsStylesheetsAnimateMinCss() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/stylesheets/animate.min.css", size: 55522, mode: os.FileMode(436), modTime: time.Unix(1445446946, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -405,7 +405,7 @@ func assetsStylesheetsBootstrapMinCss() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/stylesheets/bootstrap.min.css", size: 89437, mode: os.FileMode(436), modTime: time.Unix(1445403307, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -425,7 +425,7 @@ func assetsStylesheetsBootstrapMinCssMap() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/stylesheets/bootstrap.min.css.map", size: 41635, mode: os.FileMode(436), modTime: time.Unix(1445403312, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -445,7 +445,7 @@ func assetsStylesheetsFontAwesomeMinCss() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/stylesheets/font-awesome.min.css", size: 26711, mode: os.FileMode(436), modTime: time.Unix(1445402780, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -465,7 +465,7 @@ func assetsStylesheetsStyleCss() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "assets/stylesheets/style.css", size: 2288, mode: os.FileMode(436), modTime: time.Unix(1445830754, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -485,7 +485,7 @@ func libViewsLayoutAce() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "lib/views/layout.ace", size: 1302, mode: os.FileMode(436), modTime: time.Unix(1445778817, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -505,7 +505,7 @@ func libViewsTopIndexAce() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "lib/views/top/index.ace", size: 27, mode: os.FileMode(436), modTime: time.Unix(1445402780, 0)}
-	a := &asset{bytes: bytes, info:  info}
+	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
@@ -528,7 +528,7 @@ func Asset(name string) ([]byte, error) {
 // It simplifies safe initialization of global variables.
 func MustAsset(name string) []byte {
 	a, err := Asset(name)
-	if (err != nil) {
+	if err != nil {
 		panic("asset: Asset(" + name + "): " + err.Error())
 	}
 
@@ -620,71 +620,50 @@ func AssetDir(name string) ([]string, error) {
 }
 
 type bintree struct {
-	Func func() (*asset, error)
+	Func     func() (*asset, error)
 	Children map[string]*bintree
 }
 var _bintree = &bintree{nil, map[string]*bintree{
 	"app": &bintree{nil, map[string]*bintree{
-		"app.js": &bintree{appAppJs, map[string]*bintree{
-		}},
+		"app.js": &bintree{appAppJs, map[string]*bintree{}},
 		"controller": &bintree{nil, map[string]*bintree{
-			"dashboard_controller.js": &bintree{appControllerDashboard_controllerJs, map[string]*bintree{
-			}},
+			"dashboard_controller.js": &bintree{appControllerDashboard_controllerJs, map[string]*bintree{}},
 		}},
 		"view": &bintree{nil, map[string]*bintree{
-			"dashboard.js": &bintree{appViewDashboardJs, map[string]*bintree{
-			}},
+			"dashboard.js": &bintree{appViewDashboardJs, map[string]*bintree{}},
 		}},
 	}},
 	"assets": &bintree{nil, map[string]*bintree{
 		"fonts": &bintree{nil, map[string]*bintree{
-			"exo2-bold.ttf": &bintree{assetsFontsExo2BoldTtf, map[string]*bintree{
-			}},
-			"exo2-regular.ttf": &bintree{assetsFontsExo2RegularTtf, map[string]*bintree{
-			}},
-			"fontawesome-webfont.eot": &bintree{assetsFontsFontawesomeWebfontEot, map[string]*bintree{
-			}},
-			"fontawesome-webfont.svg": &bintree{assetsFontsFontawesomeWebfontSvg, map[string]*bintree{
-			}},
-			"fontawesome-webfont.ttf": &bintree{assetsFontsFontawesomeWebfontTtf, map[string]*bintree{
-			}},
-			"fontawesome-webfont.woff": &bintree{assetsFontsFontawesomeWebfontWoff, map[string]*bintree{
-			}},
-			"fontawesome-webfont.woff2": &bintree{assetsFontsFontawesomeWebfontWoff2, map[string]*bintree{
-			}},
+			"exo2-bold.ttf": &bintree{assetsFontsExo2BoldTtf, map[string]*bintree{}},
+			"exo2-regular.ttf": &bintree{assetsFontsExo2RegularTtf, map[string]*bintree{}},
+			"fontawesome-webfont.eot": &bintree{assetsFontsFontawesomeWebfontEot, map[string]*bintree{}},
+			"fontawesome-webfont.svg": &bintree{assetsFontsFontawesomeWebfontSvg, map[string]*bintree{}},
+			"fontawesome-webfont.ttf": &bintree{assetsFontsFontawesomeWebfontTtf, map[string]*bintree{}},
+			"fontawesome-webfont.woff": &bintree{assetsFontsFontawesomeWebfontWoff, map[string]*bintree{}},
+			"fontawesome-webfont.woff2": &bintree{assetsFontsFontawesomeWebfontWoff2, map[string]*bintree{}},
 		}},
 		"images": &bintree{nil, map[string]*bintree{
-			"favicon.ico": &bintree{assetsImagesFaviconIco, map[string]*bintree{
-			}},
+			"favicon.ico": &bintree{assetsImagesFaviconIco, map[string]*bintree{}},
 		}},
 		"javascripts": &bintree{nil, map[string]*bintree{
-			"highcharts.js": &bintree{assetsJavascriptsHighchartsJs, map[string]*bintree{
-			}},
-			"mithril.min.js": &bintree{assetsJavascriptsMithrilMinJs, map[string]*bintree{
-			}},
-			"mithril.min.js.map": &bintree{assetsJavascriptsMithrilMinJsMap, map[string]*bintree{
-			}},
+			"highcharts.js": &bintree{assetsJavascriptsHighchartsJs, map[string]*bintree{}},
+			"mithril.min.js": &bintree{assetsJavascriptsMithrilMinJs, map[string]*bintree{}},
+			"mithril.min.js.map": &bintree{assetsJavascriptsMithrilMinJsMap, map[string]*bintree{}},
 		}},
 		"stylesheets": &bintree{nil, map[string]*bintree{
-			"animate.min.css": &bintree{assetsStylesheetsAnimateMinCss, map[string]*bintree{
-			}},
-			"bootstrap.min.css": &bintree{assetsStylesheetsBootstrapMinCss, map[string]*bintree{
-			}},
-			"bootstrap.min.css.map": &bintree{assetsStylesheetsBootstrapMinCssMap, map[string]*bintree{
-			}},
-			"font-awesome.min.css": &bintree{assetsStylesheetsFontAwesomeMinCss, map[string]*bintree{
-			}},
-			"style.css": &bintree{assetsStylesheetsStyleCss, map[string]*bintree{
-			}},
+			"animate.min.css": &bintree{assetsStylesheetsAnimateMinCss, map[string]*bintree{}},
+			"bootstrap.min.css": &bintree{assetsStylesheetsBootstrapMinCss, map[string]*bintree{}},
+			"bootstrap.min.css.map": &bintree{assetsStylesheetsBootstrapMinCssMap, map[string]*bintree{}},
+			"font-awesome.min.css": &bintree{assetsStylesheetsFontAwesomeMinCss, map[string]*bintree{}},
+			"style.css": &bintree{assetsStylesheetsStyleCss, map[string]*bintree{}},
 		}},
 	}},
 	"lib": &bintree{nil, map[string]*bintree{
 		"views": &bintree{nil, map[string]*bintree{
-			"layout.ace": &bintree{libViewsLayoutAce, map[string]*bintree{
-			}},
+			"layout.ace": &bintree{libViewsLayoutAce, map[string]*bintree{}},
 			"top": &bintree{nil, map[string]*bintree{
-				"index.ace": &bintree{libViewsTopIndexAce, map[string]*bintree{
-				}},
+				"index.ace": &bintree{libViewsTopIndexAce, map[string]*bintree{}},
 			}},
 		}},
 	}},
@@ -692,49 +671,49 @@ var _bintree = &bintree{nil, map[string]*bintree{
 
 // RestoreAsset restores an asset under the given directory
 func RestoreAsset(dir, name string) error {
-        data, err := Asset(name)
-        if err != nil {
-                return err
-        }
-        info, err := AssetInfo(name)
-        if err != nil {
-                return err
-        }
-        err = os.MkdirAll(_filePath(dir, filepath.Dir(name)), os.FileMode(0755))
-        if err != nil {
-                return err
-        }
-        err = ioutil.WriteFile(_filePath(dir, name), data, info.Mode())
-        if err != nil {
-                return err
-        }
-        err = os.Chtimes(_filePath(dir, name), info.ModTime(), info.ModTime())
-        if err != nil {
-                return err
-        }
-        return nil
+	data, err := Asset(name)
+	if err != nil {
+		return err
+	}
+	info, err := AssetInfo(name)
+	if err != nil {
+		return err
+	}
+	err = os.MkdirAll(_filePath(dir, filepath.Dir(name)), os.FileMode(0755))
+	if err != nil {
+		return err
+	}
+	err = ioutil.WriteFile(_filePath(dir, name), data, info.Mode())
+	if err != nil {
+		return err
+	}
+	err = os.Chtimes(_filePath(dir, name), info.ModTime(), info.ModTime())
+	if err != nil {
+		return err
+	}
+	return nil
 }
 
 // RestoreAssets restores an asset under the given directory recursively
 func RestoreAssets(dir, name string) error {
-        children, err := AssetDir(name)
-        // File
-        if err != nil {
-                return RestoreAsset(dir, name)
-        }
-        // Dir
-        for _, child := range children {
-                err = RestoreAssets(dir, filepath.Join(name, child))
-                if err != nil {
-                        return err
-                }
-        }
-        return nil
+	children, err := AssetDir(name)
+	// File
+	if err != nil {
+		return RestoreAsset(dir, name)
+	}
+	// Dir
+	for _, child := range children {
+		err = RestoreAssets(dir, filepath.Join(name, child))
+		if err != nil {
+			return err
+		}
+	}
+	return nil
 }
 
 func _filePath(dir, name string) string {
-        cannonicalName := strings.Replace(name, "\\", "/", -1)
-        return filepath.Join(append([]string{dir}, strings.Split(cannonicalName, "/")...)...)
+	cannonicalName := strings.Replace(name, "\\", "/", -1)
+	return filepath.Join(append([]string{dir}, strings.Split(cannonicalName, "/")...)...)
 }
 
 
