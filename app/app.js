@@ -1,4 +1,5 @@
 var dashboard = dashboard || {};
+var wsURL = 'ws://' + window.location.host + '/ws'
 
 var extractStatus = function(xhr, xhrOptions) {
   return xhr.status !== 200 ? xhr.status : xhr.responseText;
