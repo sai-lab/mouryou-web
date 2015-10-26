@@ -1,3 +1,4 @@
+var anime = anime || {};
 var dashboard = dashboard || {};
 
 (function() {
@@ -25,12 +26,14 @@ var dashboard = dashboard || {};
               ]),
               hypervisor.virtual_machines.map(function(machine) {
                 var view =  m('li.list-group-item.p-a-sm.animated.fadeInRight', {
-                  style: animationDelay(i)
+                  id: 'machine-list-' + String(i),
+                  style: animationDelay(i),
+                  config: anime.reset
                 }, [
                   m('i.fa.fa-fw.fa-hdd-o.m-r-sm'),
                   m('span.bold', machine.name),
-                  m('span.label.label-pill.bg-default.text-white.pull-right.animated', {
-                    id: 'machine-' + String(i)
+                  m('span.label.label-pill.bg-default.text-white.pull-right', {
+                    id: 'machine-label-' + String(i)
                   }, [
                     m('i.fa.fa-fw.fa-power-off')
                   ])

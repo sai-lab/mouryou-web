@@ -1,12 +1,18 @@
 .text-white,   a.text-white:hover   { color: #fff;    }
 .text-mouryou, a.text-mouryou:hover { color: #00adb5; }
 
-.bg-default { background: #818a91; }
-.bg-white   { background: #fff;    }
-.bg-mouryou { background: #00adb5; }
-.bg-mouryou * { color: #fff !important; }
+.border-mouryou { border: 1px solod #00adb5; }
 
-.border-mouryou { border: 1px solid #00adb5; }
+.bg-default       { background: #818a91; }
+.bg-white         { background: #fff;    }
+.bg-mouryou       { background: #00adb5; }
+.bg-booting-up    { background: #b3d315; }
+.bg-shutting-down { background: #f9a200; }
+
+.bg-mouryou       * { color: #fff !important; }
+.bg-booting-up    * { color: #fff !important; }
+.bg-booting-up    * { color: #fff !important; }
+.bg-shutting-down * { color: #fff !important; }
 
 .m-a-sm { margin:        .5rem !important; }
 .m-t-sm { margin-top:    .5rem !important; }
