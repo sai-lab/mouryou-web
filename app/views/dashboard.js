@@ -33,7 +33,8 @@ var dashboard = dashboard || {};
                   m('i.fa.fa-fw.fa-hdd-o.m-r-sm'),
                   m('span.bold', machine.name),
                   m('span.label.label-pill.bg-default.text-white.pull-right', {
-                    id: 'machine-label-' + String(i)
+                    id: 'machine-label-' + String(i),
+                    class: i === 0 ? 'bg-mouryou' : ''
                   }, [
                     m('i.fa.fa-fw.fa-power-off')
                   ])
