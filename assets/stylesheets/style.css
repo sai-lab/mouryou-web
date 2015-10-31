@@ -1,7 +1,7 @@
 .text-white,   a.text-white:hover   { color: #fff;    }
 .text-mouryou, a.text-mouryou:hover { color: #00adb5; }
 
-.border-mouryou { border: 1px solod #00adb5; }
+.border-mouryou { border: 1px solid #00adb5 !important; }
 
 .bg-default       { background: #818a91; }
 .bg-white         { background: #fff;    }
@@ -104,4 +104,8 @@ a.link-mouryou:hover {
 .list-group-item:last-child {
   border-bottom-left-radius: .3rem;
   border-bottom-right-radius: .3rem;
+}
+
+.list-group-item:nth-child(2) {
+  border-top: none;
 }
