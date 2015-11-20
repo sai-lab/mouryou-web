@@ -1,6 +1,6 @@
 var chart = chart || {};
-var realtime = realtime || {};
 var dashboard = dashboard || {};
+var realtime = realtime || {};
 
 (function() {
   'use strict';
