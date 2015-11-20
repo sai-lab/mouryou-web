@@ -28,7 +28,7 @@ var dashboard = dashboard || {};
                 var view =  m('li.list-group-item.p-a-sm.animated.fadeInRight', {
                   id: 'machine-list-' + String(i),
                   style: animationDelay(i),
-                  config: anime.reset
+                  config: anime.initialize
                 }, [
                   m('i.fa.fa-fw.fa-hdd-o.m-r-sm'),
                   m('span.bold', machine.name),
