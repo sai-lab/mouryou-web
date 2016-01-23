@@ -12,6 +12,6 @@ type ClusterController struct {
 	Hypervisors  *HypervisorsController
 }
 
-func (cluster ClusterController) Index(c web.C, w http.ResponseWriter, r *http.Request) {
-	cluster.API(w, Cluster)
+func (cluster ClusterController) IndexAPI(c web.C, w http.ResponseWriter, r *http.Request) {
+	cluster.JSON(w, Cluster)
 }

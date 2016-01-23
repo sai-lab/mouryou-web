@@ -10,6 +10,6 @@ type LoadBalancerController struct {
 	controller
 }
 
-func (balancer LoadBalancerController) Index(c web.C, w http.ResponseWriter, r *http.Request) {
-	balancer.API(w, Cluster.LoadBalancer)
+func (balancer LoadBalancerController) IndexAPI(c web.C, w http.ResponseWriter, r *http.Request) {
+	balancer.JSON(w, Cluster.LoadBalancer)
 }

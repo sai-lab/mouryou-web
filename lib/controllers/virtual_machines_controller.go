@@ -12,16 +12,16 @@ type VirtualMachinesController struct {
 	controller
 }
 
-func (machines VirtualMachinesController) Index(c web.C, w http.ResponseWriter, r *http.Request) {
+func (machines VirtualMachinesController) IndexAPI(c web.C, w http.ResponseWriter, r *http.Request) {
 	hypervisor := HypervisorsController{}.get(c.URLParams["hid"], w)
 	if hypervisor == nil {
 		return
 	}
 
-	machines.API(w, hypervisor.VirtualMachines)
+	machines.JSON(w, hypervisor.VirtualMachines)
 }
 
-func (machines VirtualMachinesController) Show(c web.C, w http.ResponseWriter, r *http.Request) {
+func (machines VirtualMachinesController) ShowAPI(c web.C, w http.ResponseWriter, r *http.Request) {
 	hypervisor := HypervisorsController{}.get(c.URLParams["hid"], w)
 	if hypervisor == nil {
 		return
@@ -32,7 +32,7 @@ func (machines VirtualMachinesController) Show(c web.C, w http.ResponseWriter, r
 		return
 	}
 
-	machines.API(w, machine)
+	machines.JSON(w, machine)
 }
 
 func (machines VirtualMachinesController) get(hypervisor *models.HypervisorStruct, vid string, w http.ResponseWriter) *models.VirtualMachineStruct {

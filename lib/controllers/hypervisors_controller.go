@@ -13,17 +13,17 @@ type HypervisorsController struct {
 	VirtualMachines *VirtualMachinesController
 }
 
-func (hypervisors HypervisorsController) Index(c web.C, w http.ResponseWriter, r *http.Request) {
-	hypervisors.API(w, Cluster.Hypervisors)
+func (hypervisors HypervisorsController) IndexAPI(c web.C, w http.ResponseWriter, r *http.Request) {
+	hypervisors.JSON(w, Cluster.Hypervisors)
 }
 
-func (hypervisors HypervisorsController) Show(c web.C, w http.ResponseWriter, r *http.Request) {
+func (hypervisors HypervisorsController) ShowAPI(c web.C, w http.ResponseWriter, r *http.Request) {
 	hypervisor := hypervisors.get(c.URLParams["hid"], w)
 	if hypervisor == nil {
 		return
 	}
 
-	hypervisors.API(w, hypervisor)
+	hypervisors.JSON(w, hypervisor)
 }
 
 func (hypervisors HypervisorsController) get(hid string, w http.ResponseWriter) *models.HypervisorStruct {
