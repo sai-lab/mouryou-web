@@ -17,15 +17,15 @@ html lang="en"
     nav.navbar.navbar-fixed-top.bg-white
       .container
         a#app-title.navbar-brand.text-mouryou href="/"
-          i.fa.fa-cube.m-r-sm
+          i.fa.fa-cube.m-r-05
           span.bold mouryou
 
-    .container.m-y-md
+    .container.m-y-2
       = yield main
 
-    footer.small.m-y-md.text-muted
+    footer.small.m-y-2.text-muted
       .container
-        i.fa.fa-copyright.m-r-sm
+        i.fa.fa-copyright.m-r-05
         a.link-muted href="https://github.com/sai-lab/mouryou-web" target="_blank" Saisho Laboratory
 
     script src="/assets/javascripts/mithril.min.js" type="text/javascript"

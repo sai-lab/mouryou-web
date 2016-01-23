@@ -11,7 +11,7 @@ var dashboard = dashboard || {};
     return m('.row', [
       m('.col-md-9', [
         m('.chart', [
-          m('#chart-block.m-a-sm', {
+          m('#chart-block.m-a-05', {
             config: dashboard.plotter(ctrl)
           })
         ])
@@ -20,17 +20,17 @@ var dashboard = dashboard || {};
         m('ul.list-group.small', [
           ctrl.hypervisors().map(function(hypervisor) {
             return [
-              m('li.list-group-item.bg-mouryou.text-white.border-mouryou.p-a-sm.animated.fadeInRight', [
-                m('i.fa.fa-fw.fa-server.m-r-sm'),
+              m('li.list-group-item.bg-mouryou.text-white.border-mouryou.p-a-05.animated.fadeInRight', [
+                m('i.fa.fa-fw.fa-server.m-r-05'),
                 m('span.bold', hypervisor.name)
               ]),
               hypervisor.virtual_machines.map(function(machine) {
-                var view =  m('li.list-group-item.p-a-sm.animated.fadeInRight', {
+                var view =  m('li.list-group-item.p-a-05.animated.fadeInRight', {
                   id: 'machine-list-' + String(i),
                   style: animationDelay(i),
                   config: anime.initialize
                 }, [
-                  m('i.fa.fa-fw.fa-hdd-o.m-r-sm'),
+                  m('i.fa.fa-fw.fa-hdd-o.m-r-05'),
                   m('span.bold', machine.name),
                   m('span.label.label-pill.bg-default.text-white.pull-right', {
                     id: 'machine-label-' + String(i),
