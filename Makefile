@@ -8,13 +8,13 @@ run:
 	gom run *.go ${ARGS}
 
 fmt:
-	gom exec goimports -w *.go lib/*/*.go
+	gom exec goimports -w *.go backend/*/*.go
 
 bindata:
-	gom exec go-bindata-assetfs ./app/... ./assets/... ./lib/views/...
+	gom exec go-bindata-assetfs ./frontend/... ./assets/... ./backend/views/...
 
 debugdata:
-	gom exec go-bindata-assetfs -debug=true ./app/... ./assets/... ./lib/views/...
+	gom exec go-bindata-assetfs -debug=true ./frontend/... ./assets/... ./backend/views/...
 
 build: fmt bindata
 	gom build $(GO_BUILDOPT) -o bin/mouryou-web *.go
