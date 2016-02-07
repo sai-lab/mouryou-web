@@ -60,6 +60,7 @@ var chart = chart || {};
       },
       max: 1.0,
       min: 0.0,
+      tickInterval: 0.1,
       title: ''
     }
   };
