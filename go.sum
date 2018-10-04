@@ -1,0 +1,16 @@
+github.com/elazarl/go-bindata-assetfs v1.0.0 h1:G/bYguwHIzWq9ZoyUQqrjTmJbbYn3j3CKKpKinvZLFk=
+github.com/elazarl/go-bindata-assetfs v1.0.0/go.mod h1:v+YaWX3bdea5J/mo8dSETolEo7R71Vk1u8bnjau5yw4=
+github.com/mattn/go-pipeline v0.0.0-20170920030317-cfb87a531e2b h1:tllLy4xWlUKqXcHijy3zere2s/7y0EJXjbyGeNYrpe8=
+github.com/mattn/go-pipeline v0.0.0-20170920030317-cfb87a531e2b/go.mod h1:THCMZVX5asLpinN+6hFlR1xKFcFsaDpAtUltGqZauBM=
+github.com/sai-lab/mouryou v0.0.0-20180726030254-8ceedf23bf74 h1:knYaL+Z9viPguhjqKpI6gU1cYXGxjeCRHXure5i6ZaI=
+github.com/sai-lab/mouryou v0.0.0-20180726030254-8ceedf23bf74/go.mod h1:w2ikhxb3KkZBIPRzU08oVCBIdTDXRDny8h0cp4Si1Nk=
+github.com/shirou/gopsutil v2.17.12+incompatible h1:FNbznluSK3DQggqiVw3wK/tFKJrKlLPBuQ+V8XkkCOc=
+github.com/shirou/gopsutil v2.17.12+incompatible/go.mod h1:5b4v6he4MtMOwMlS0TUMTu2PcXUg8+E1lC7eC3UO/RA=
+github.com/yosssi/ace v0.0.5 h1:tUkIP/BLdKqrlrPwcmH0shwEEhTRHoGnc1wFIWmaBUA=
+github.com/yosssi/ace v0.0.5/go.mod h1:ALfIzm2vT7t5ZE7uoIZqF3TQ7SAOyupFZnkrF5id+K0=
+github.com/zenazn/goji v0.9.0 h1:RSQQAbXGArQ0dIDEq+PI6WqN6if+5KHu6x2Cx/GXLTQ=
+github.com/zenazn/goji v0.9.0/go.mod h1:7S9M489iMyHBNxwZnk9/EHS098H4/F6TATF2mIxtB1Q=
+golang.org/x/net v0.0.0-20181003013248-f5e5bdd77824 h1:MkjFNbaZJyH98M67Q3umtwZ+EdVdrNJLqSwZp5vcv60=
+golang.org/x/net v0.0.0-20181003013248-f5e5bdd77824/go.mod h1:mL1N/T3taQHkDXs73rZJwtUhF3w3ftmwwsq0BUmARs4=
+golang.org/x/sys v0.0.0-20181003145944-af653ce8b74f h1:zAtpFwFDtnvBWPPelq8CSiqRN1wrIzMUk9dwzbpjpNM=
+golang.org/x/sys v0.0.0-20181003145944-af653ce8b74f/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=

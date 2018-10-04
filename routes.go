@@ -17,7 +17,9 @@ func main() {
 
 	controllers.Asset = Asset
 
-	config := models.LoadConfig(os.Getenv("HOME") + "/.mouryou.json")
+	config := new(models.Config)
+
+	config.LoadSetting(os.Getenv("HOME") + "/.mouryou.json")
 	controllers.Cluster = &config.Cluster
 
 	top := &controllers.TopController{}

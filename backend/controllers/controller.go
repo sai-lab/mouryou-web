@@ -10,7 +10,7 @@ import (
 
 var (
 	Asset   func(string) ([]byte, error)
-	Cluster *models.ClusterStruct
+	Cluster *models.Cluster
 )
 
 type controller struct{}

@@ -35,7 +35,7 @@ func (machines VirtualMachinesController) ShowAPI(c web.C, w http.ResponseWriter
 	machines.JSON(w, machine)
 }
 
-func (machines VirtualMachinesController) get(hypervisor *models.HypervisorStruct, vid string, w http.ResponseWriter) *models.VirtualMachineStruct {
+func (machines VirtualMachinesController) get(hypervisor *models.HypervisorStruct, vid string, w http.ResponseWriter) *models.VirtualMachine {
 	id, err := strconv.Atoi(vid)
 	if err != nil {
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
