@@ -9,7 +9,7 @@ import (
 type ClusterController struct {
 	controller
 	LoadBalancer *LoadBalancerController
-	Hypervisors  *HypervisorsController
+	Vendors      *VendorsController
 }
 
 func (cluster ClusterController) IndexAPI(c web.C, w http.ResponseWriter, r *http.Request) {

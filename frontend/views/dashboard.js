@@ -18,13 +18,13 @@ var dashboard = dashboard || {};
       ]),
       m('.col-md-3', [
         m('ul.list-group.small', [
-          ctrl.hypervisors().map(function(hypervisor) {
+          ctrl.vendors().map(function(vendor) {
             return [
               m('li.list-group-item.bg-mouryou.text-white.border-mouryou.p-a-05.animated.fadeInRight', [
                 m('i.fa.fa-fw.fa-server.m-r-05'),
-                m('span.bold', hypervisor.name)
+                m('span.bold', vendor.name)
               ]),
-              hypervisor.virtual_machines.map(function(machine) {
+              vendor.virtual_machines.map(function(machine) {
                 var view =  m('li.list-group-item.p-a-05.animated.fadeInRight', {
                   id: 'machine-list-' + String(i),
                   style: animationDelay(i),

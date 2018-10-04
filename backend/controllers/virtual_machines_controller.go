@@ -2,7 +2,6 @@ package controllers
 
 import (
 	"net/http"
-	"strconv"
 
 	"github.com/sai-lab/mouryou/lib/models"
 	"github.com/zenazn/goji/web"
@@ -13,21 +12,21 @@ type VirtualMachinesController struct {
 }
 
 func (machines VirtualMachinesController) IndexAPI(c web.C, w http.ResponseWriter, r *http.Request) {
-	hypervisor := HypervisorsController{}.get(c.URLParams["hid"], w)
-	if hypervisor == nil {
+	vendor := VendorsController{}.get(c.URLParams["vid"], w)
+	if vendor == nil {
 		return
 	}
 
-	machines.JSON(w, hypervisor.VirtualMachines)
+	machines.JSON(w, vendor.VirtualMachines)
 }
 
 func (machines VirtualMachinesController) ShowAPI(c web.C, w http.ResponseWriter, r *http.Request) {
-	hypervisor := HypervisorsController{}.get(c.URLParams["hid"], w)
-	if hypervisor == nil {
+	vendor := VendorsController{}.get(c.URLParams["vid"], w)
+	if vendor == nil {
 		return
 	}
 
-	machine := machines.get(hypervisor, c.URLParams["vid"], w)
+	machine := machines.get(vendor, c.URLParams["vmid"], w)
 	if machine == nil {
 		return
 	}
@@ -35,15 +34,12 @@ func (machines VirtualMachinesController) ShowAPI(c web.C, w http.ResponseWriter
 	machines.JSON(w, machine)
 }
 
-func (machines VirtualMachinesController) get(hypervisor *models.HypervisorStruct, vid string, w http.ResponseWriter) *models.VirtualMachine {
-	id, err := strconv.Atoi(vid)
-	if err != nil {
+func (machines VirtualMachinesController) get(vendor *models.VendorStruct, vmid string, w http.ResponseWriter) *models.VirtualMachine {
+	machine, ok := vendor.VirtualMachines[vmid]
+	if !ok {
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
-		return nil
-	} else if id < 0 || id >= len(hypervisor.VirtualMachines) {
-		http.Error(w, http.StatusText(http.StatusNotFound), http.StatusNotFound)
 		return nil
 	}
 
-	return &hypervisor.VirtualMachines[id]
+	return &machine
 }

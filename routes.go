@@ -25,17 +25,17 @@ func main() {
 	top := &controllers.TopController{}
 	cluster := &controllers.ClusterController{}
 	cluster.LoadBalancer = &controllers.LoadBalancerController{}
-	cluster.Hypervisors = &controllers.HypervisorsController{}
-	cluster.Hypervisors.VirtualMachines = &controllers.VirtualMachinesController{}
+	cluster.Vendors = &controllers.VendorsController{}
+	cluster.Vendors.VirtualMachines = &controllers.VirtualMachinesController{}
 
 	goji.Get("/assets/*", http.FileServer(&assetfs.AssetFS{Asset: Asset, AssetDir: AssetDir, AssetInfo: AssetInfo, Prefix: "/"}))
 	goji.Get("/frontend/*", http.FileServer(&assetfs.AssetFS{Asset: Asset, AssetDir: AssetDir, AssetInfo: AssetInfo, Prefix: "/"}))
 	goji.Get("/api/cluster", cluster.IndexAPI)
 	goji.Get("/api/cluster/load_balancer", cluster.LoadBalancer.IndexAPI)
-	goji.Get("/api/cluster/hypervisors", cluster.Hypervisors.IndexAPI)
-	goji.Get("/api/cluster/hypervisors/:hid", cluster.Hypervisors.ShowAPI)
-	goji.Get("/api/cluster/hypervisors/:hid/virtual_machines", cluster.Hypervisors.VirtualMachines.IndexAPI)
-	goji.Get("/api/cluster/hypervisors/:hid/virtual_machines/:vid", cluster.Hypervisors.VirtualMachines.ShowAPI)
+	goji.Get("/api/cluster/vendors", cluster.Vendors.IndexAPI)
+	goji.Get("/api/cluster/vendors/:vid", cluster.Vendors.ShowAPI)
+	goji.Get("/api/cluster/vendors/:vid/virtual_machines", cluster.Vendors.VirtualMachines.IndexAPI)
+	goji.Get("/api/cluster/vendors/:vid/virtual_machines/:vmid", cluster.Vendors.VirtualMachines.ShowAPI)
 	goji.Get("/", top.Index)
 
 	goji.Serve()

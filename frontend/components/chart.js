@@ -70,8 +70,8 @@ var chart = chart || {};
       return 0.0;
     });
 
-    ctrl.hypervisors().map(function(hypervisor) {
-      hypervisor.virtual_machines.map(function(machine) {
+    ctrl.vendors().map(function(vendor) {
+      vendor.virtual_machines.map(function(machine) {
         chart.options.series.push({
           name: machine.name,
           data: arr

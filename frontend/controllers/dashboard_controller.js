@@ -6,9 +6,9 @@ var realtime = realtime || {};
   'use strict';
 
   dashboard.controller = function() {
-    this.hypervisors = m.request({
+    this.vendors = m.request({
       method: 'GET',
-      url: '/api/cluster/hypervisors',
+      url: '/api/cluster/vendors',
       initialValue: []
     });
   };

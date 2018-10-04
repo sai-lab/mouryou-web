@@ -4,6 +4,8 @@
 .DS_Store
 /_vendor
 /.vendor
+vendor
 /bin/mouryou-web
 /tmp
 mouryou-web
+.idea/
