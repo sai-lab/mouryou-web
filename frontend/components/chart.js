@@ -71,11 +71,11 @@ var chart = chart || {};
     });
 
     ctrl.vendors().map(function(vendor) {
-      vendor.virtual_machines.map(function(machine) {
-        chart.options.series.push({
-          name: machine.name,
-          data: arr
-        });
+      Object.keys(vendor.virtual_machines).map(function (machine) {
+          chart.options.series.push({
+              name: machine,
+              data: arr
+          });
       });
     });
 
