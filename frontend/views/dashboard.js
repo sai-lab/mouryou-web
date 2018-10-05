@@ -24,17 +24,17 @@ var dashboard = dashboard || {};
                 m('i.fa.fa-fw.fa-server.m-r-05'),
                 m('span.bold', vendor.name)
               ]),
-                Object.keys(vendor.virtual_machines).map(function (machine) {
-                    var view =  m('li.list-group-item.p-a-05.animated.fadeInRight', {
+              Object.entries(vendor.virtual_machines).map(function (machine) {
+                var view =  m('li.list-group-item.p-a-05.animated.fadeInRight', {
                   id: 'machine-list-' + String(i),
                   style: animationDelay(i),
                   config: anime.initialize
                 }, [
                   m('i.fa.fa-fw.fa-hdd-o.m-r-05'),
-                  m('span.bold', machine),
+                  m('span.bold', machine[1].name),
                   m('span.label.label-pill.bg-default.text-white.pull-right', {
                     id: 'machine-label-' + String(i),
-                    class: i === 0 ? 'bg-mouryou' : ''
+                    class: machine[1].is_start_machine ? 'bg-mouryou' : ''
                   }, [
                     m('i.fa.fa-fw.fa-power-off')
                   ])

@@ -11,6 +11,7 @@ import (
 type VendorsController struct {
 	controller
 	VirtualMachines *VirtualMachinesController
+	StartMachineIDs []int
 }
 
 func (vendors VendorsController) IndexAPI(c web.C, w http.ResponseWriter, r *http.Request) {
