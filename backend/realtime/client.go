@@ -25,7 +25,7 @@ func NewClient(ws *websocket.Conn, server *Server) *Client {
 		id:     totalID,
 		ws:     ws,
 		server: server,
-		ch:     make(chan string),
+		ch:     make(chan string, 10),
 		doneCh: make(chan bool),
 	}
 }
@@ -58,7 +58,10 @@ func (client *Client) listenWrite() {
 
 		case message := <-client.ch:
 			log.Println("Send:", message)
-			websocket.Message.Send(client.ws, message)
+			err := websocket.Message.Send(client.ws, message)
+			if err != nil {
+				log.Println("Error:", err)
+			}
 
 		case <-client.doneCh:
 			client.server.Remove(client)
