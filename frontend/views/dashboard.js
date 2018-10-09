@@ -1,6 +1,13 @@
 var anime = anime || {};
 var dashboard = dashboard || {};
 
+const operationType = new Map([
+  ['booting up', 'bg-booting-up'],
+  ['booted up', 'bg-mouryou'],
+  ['shutting down', 'bg-shutting-down'],
+  ['shutted down', 'bg-default'],
+]);
+
 (function() {
   'use strict';
 
@@ -34,7 +41,7 @@ var dashboard = dashboard || {};
                   m('span.bold', machine[1].name),
                   m('span.label.label-pill.bg-default.text-white.pull-right', {
                     id: 'machine-label-' + machine[1].name,
-                    class: machine[1].is_start_machine ? 'bg-mouryou' : ''
+                    class: operationType.get(machine[1].operation)
                   }, [
                     m('i.fa.fa-fw.fa-power-off')
                   ])

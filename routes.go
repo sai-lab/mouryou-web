@@ -18,8 +18,8 @@ func main() {
 	controllers.Asset = Asset
 
 	config := new(models.Config)
-
 	config.LoadSetting(os.Getenv("HOME") + "/.mouryou.json")
+
 	controllers.Cluster = &config.Cluster
 
 	top := &controllers.TopController{}
@@ -36,6 +36,7 @@ func main() {
 	goji.Get("/api/cluster/vendors/:vid", cluster.Vendors.ShowAPI)
 	goji.Get("/api/cluster/vendors/:vid/virtual_machines", cluster.Vendors.VirtualMachines.IndexAPI)
 	goji.Get("/api/cluster/vendors/:vid/virtual_machines/:vmid", cluster.Vendors.VirtualMachines.ShowAPI)
+	goji.Put("/api/cluster/vendors/:vid/virtual_machines/:vmid/:operation", cluster.Vendors.VirtualMachines.UpdateAPI)
 	goji.Get("/", top.Index)
 
 	goji.Serve()

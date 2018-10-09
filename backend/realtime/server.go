@@ -3,6 +3,7 @@ package realtime
 import (
 	"log"
 	"net/http"
+	"strings"
 
 	"golang.org/x/net/websocket"
 )
@@ -55,6 +56,29 @@ func (server *Server) broadcast(message string) {
 	}
 }
 
+func (server *Server) updateOperation(message string) {
+	str := strings.Split(message, ":")
+	if strings.Contains(str[0], "Loads") {
+		return
+	}
+
+	operation := strings.ToLower(str[0])
+	replacedOperation := strings.Replace(operation, " ", "_", -1)
+	vmid := strings.TrimSpace(str[1])
+	// TODO: vendors id set
+	req, err := http.NewRequest("PUT", "http://0.0.0.0:8000/api/cluster/vendors/0/virtual_machines/"+vmid+"/"+replacedOperation, nil)
+	if err != nil {
+		log.Println(err)
+	}
+
+	client := new(http.Client)
+	resp, err := client.Do(req)
+	if err != nil {
+		log.Println(err)
+	}
+	defer resp.Body.Close()
+}
+
 func (server *Server) Listen() {
 	onConnected := func(ws *websocket.Conn) {
 		defer func() {
@@ -85,6 +109,7 @@ func (server *Server) Listen() {
 		case message := <-server.broadcastCh:
 			log.Println("Broadcast:", message)
 			server.broadcast(message)
+			server.updateOperation(message)
 
 		case err := <-server.errorCh:
 			log.Println("Error:", err.Error())
