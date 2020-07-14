@@ -58,9 +58,9 @@ var chart = chart || {};
         },
         format: '{value:.1f}'
       },
-      max: 1.0,
+      max: 300.0,
       min: 0.0,
-      tickInterval: 0.1,
+      tickInterval: 1.0,
       title: ''
     }
   };
